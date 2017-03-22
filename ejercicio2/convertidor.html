@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <p><input id="celcius" onkeyup="convertir('C')"> Grados Celsius
+    <input id="farenheit" onkeyup="convertir('F')"> Grados Fahrenheit</p>
+
+    <script>
+  function convertir(grados) {
+    var cambio;
+    if (grados == "C") {
+        cambio = document.getElementById("celcius").value * 9 / 5 + 32;
+        document.getElementById("farenheit").value = Math.round(cambio);
+      } else {
+        cambio = (document.getElementById("farenheit").value -32) * 5 / 9;
+        document.getElementById("celcius").value = Math.round(cambio);
+      }
+    }
+    </script>
+  </body>
+</html>
